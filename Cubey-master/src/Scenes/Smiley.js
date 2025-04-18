@@ -58,6 +58,10 @@ class Smiley extends Phaser.Scene {
         // Since sprites are visible when created and we only want one smile to be shown
         // at a time, make the "dimple" smile not visible to start.
         my.sprite.dimple.visible = false;
+
+        this.input.keyboard.on('keydown-M', () => {
+           this.scene.start("mouseSmiley");
+        });
     }
 
     update() {
